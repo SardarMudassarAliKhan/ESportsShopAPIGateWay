@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ESports Shop API Gateway", Version = "v2" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ESports Shop API Gateway: Ocelot: API Gateway ", Version = "v2" });
 });
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
