@@ -1,31 +1,55 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/microservice1/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/swagger/index.html",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "172.174.204.164",
           "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/microservice1/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamPathTemplate": "/service1/{everything}",
+      "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/microservice2/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/swagger/index.html",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "172.174.204.164",
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/microservice2/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamPathTemplate": "/service2/{everything}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/index.html",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.174.204.164",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/service3/{everything}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/index.html",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.174.204.164",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/service4/{everything}",
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7085"
+    "BaseUrl": "http://172.174.204.164:5000/"
   }
 }
